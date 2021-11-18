@@ -1,0 +1,33 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+apply from: '../base.gradle'
+
+
+android {
+
+    defaultConfig {
+        applicationId "com.bugmaker.composemusic"
+        versionCode 1
+        versionName "1.0"
+    }
+
+}
+
+
+dependencies {
+    implementation project(path: ':base')
+    implementation "androidx.compose.ui:ui:$compose_version"
+    implementation "androidx.compose.material:material:$compose_version"
+    implementation "androidx.compose.ui:ui-tooling-preview:$compose_version"
+    implementation "androidx.compose.foundation:foundation:${compose_version}"
+    implementation "androidx.compose.foundation:foundation-layout:${compose_version}"
+    implementation "androidx.compose.ui:ui-util:${compose_version}"
+    implementation "androidx.compose.runtime:runtime:${compose_version}"
+    implementation "androidx.compose.animation:animation:${compose_version}"
+    implementation "androidx.compose.material:material-icons-extended:$compose_version"
+    androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_version"
+    debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
+}
